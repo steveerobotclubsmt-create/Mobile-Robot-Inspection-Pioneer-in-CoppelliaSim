@@ -1,0 +1,4 @@
+PyQt5>=5.15
+coppeliasim-zmqremoteapi-client
+numpy
+opencv-python

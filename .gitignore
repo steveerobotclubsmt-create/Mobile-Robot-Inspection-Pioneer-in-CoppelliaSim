@@ -1,0 +1,18 @@
+# Runtime output
+snapshot.png
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# CoppeliaSim backups
+*.ttt.bak
+*.ttt~
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
