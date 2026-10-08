@@ -89,6 +89,7 @@ click on overhead view
 - **Localisation** uses CoppeliaSim's ground-truth pose. A real robot would need wheel odometry plus correction, for example Monte Carlo Localisation.
 - **Mapping** is rebuilt from scratch on every plan and only covers what the overhead camera can see. Nothing is stored between plans, and there's no SLAM.
 - **Grid paths** are made of 45° segments. The waypoint follower smooths them out, but they are not the shortest possible path in continuous space.
+- **The jam detector counts turning in place as being stuck.** If a target needs a turn of more than about 90°, the robot spins for over 0.8 s without changing position, and that sets off the reverse → pivot → escape recovery even when the path is clear. The robot still reaches the target, just with an unnecessary manoeuvre. Counting a tick as stuck only when the robot was told to drive forward or backward would fix it.
 
 ---
 
